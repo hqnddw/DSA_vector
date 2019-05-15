@@ -69,7 +69,7 @@ public:
         return !size; //判断向量是否为空
     }
 
-    bool isOrdered() const; //判断是否有序
+    int disordered() const; //判断是否有序
 
     Rank find(T const &e) const {
         return find(e, 0, (Rank) size); //无序向量整体查找
@@ -99,6 +99,9 @@ public:
 
     int deduplicate();  //无序去重
     int uniquify();  //有序去重
+
+    //遍历
+    void traverse();
 };
 
 #endif //DSA_VECTOR_H
